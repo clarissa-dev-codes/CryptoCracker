@@ -1,18 +1,14 @@
 #this is going to be the main menu
 #will have each cipher solver in a new folder
+import sys
+import time
 
-import CeasarCipher
+print('Welcome!\n')
+response = int(input("Please choose what cipher you would like to use: \n1) Caesar Cipher\n"))
 
-
-def main():
-    print("Welcome! Please pick the cipher you'd like to use:")
-    response = int(input("1) Caesar Cipher\n"))
-
-    if response == 1:
-        CeasarCipher.CaesarCipher()
-    else:
-        print("That was not a valid choice")
+if response == 1:
+    import CeasarCipher
 
 
-if __name__ == "__main__":
-    main()
+print('Thank you and have a good day!')
+time.sleep(3)

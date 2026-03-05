@@ -29,8 +29,8 @@ class CaesarCipher():
         response = int(input("Please make your choice:\n1) Encrypt message\n2) Decrypt message\n"))
 
         if response == 1:
-            encrypted = input("Please enter the phrase you would like to encrypt: \n")
-            shift = int(input("Please enter the shift number: \n"))
+            encrypted = input("Please enter the phrase you would like to encrypt: ")
+            shift = int(input("Please enter the shift number: "))
 
             encrypted_text = encrypt(encrypted, shift)
             print(encrypted_text)
@@ -44,6 +44,7 @@ class CaesarCipher():
 
         reply = int(input('Would you like to do something else?\n 1) Yes\n 2) No\n '))
         if reply == 2:
+            print('\n')
             break
 
 

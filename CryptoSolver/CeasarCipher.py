@@ -44,7 +44,6 @@ class CaesarCipher():
 
         reply = int(input('Would you like to do something else?\n 1) Yes\n 2) No\n '))
         if reply == 2:
-            print('\n')
             break
 
 

@@ -24,7 +24,7 @@ def decrypt(text, shift):
     return caesar(text, shift, encrypt=False)
 
 
-class CaesarCipher():
+if __name__ == '__main__':
     while True:
         response = int(input("Please make your choice:\n1) Encrypt message\n2) Decrypt message\n"))
 
@@ -45,6 +45,7 @@ class CaesarCipher():
         reply = int(input('Would you like to do something else?\n 1) Yes\n 2) No\n '))
         if reply == 2:
             break
+
 
 
 

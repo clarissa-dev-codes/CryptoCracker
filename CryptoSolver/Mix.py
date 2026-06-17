@@ -6,9 +6,9 @@ import time
 
 ciphernum = 3
 
-class Mix():
-    phrase = input('Please enter the phrase you would like to encrypt: ')
+def Mix(text):
 
+    phrase = text.lower()
 
     print('Processing ...')
     time.sleep(2)
@@ -36,4 +36,4 @@ class Mix():
 
         num += 1
 
-    print(phrase)
+    return phrase

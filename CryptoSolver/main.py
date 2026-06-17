@@ -29,7 +29,7 @@ while True:
                 solve_it = input("Please enter the string that needs to be translated: ")
                 shift_it = int(input("Please enter the shift number "))
 
-                decrypted_text = CeasarCipher.decrypt(solve_it, shift_it, encrypt=False)
+                decrypted_text = CeasarCipher.decrypt(solve_it, shift_it)
                 print(decrypted_text)
 
             reply = int(input('Would you like to do something else?\n 1) Yes\n 2) No\n '))
@@ -59,8 +59,8 @@ while True:
         import VigenereCipher
 
         while True:
-            phrase = int(input('Please enter the phrase you would like to encode: '))
-            phrase_encoded = VigenereCipher.encrypted_phrase(phrase)
+            phrase = input('Please enter the phrase you would like to encode: ')
+            phrase_encoded = VigenereCipher.encrypt(phrase)
             print(phrase_encoded)
 
             reply = int(input('Would you like to do something else?\n 1) Yes\n 2) No\n '))
@@ -70,6 +70,15 @@ while True:
 
     elif response == 4:
         import Mix
+
+        while True:
+            phrase = input('Please enter the phrase you would like to encode: ')
+            newphrase = Mix.Mix(phrase)
+            print(newphrase)
+
+            reply = int(input('Would you like to do something else?\n 1) Yes\n 2) No\n '))
+            if reply == 2:
+                break
 
     reply = int(input('Would you like to use another cipher?\n 1) Yes\n 2) No\n'))
     if reply == 2:
